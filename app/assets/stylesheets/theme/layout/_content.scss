@@ -117,7 +117,7 @@
 		}
 	}
 	[bg-dark]{
-		.section-title{ 
+		.section-title{
 			color: white;
 
 			&:after{
@@ -191,8 +191,8 @@
 			overflow: hidden;
 			border-radius: 5px;
 
-			
-			@media screen and (max-width: 480px){ 
+
+			@media screen and (max-width: 480px){
 				position: relative;
 				left:0;
 				top:0;
@@ -273,7 +273,7 @@
 		font-weight: 100;
 		margin: 0 0 30px;
 		a{
-			color: white;
+			color: #e6e6e6;
 
 		}
 	}
@@ -302,14 +302,14 @@
 	}
 	p{
 		@include em(18);
-	}	
+	}
 }
 
 .house-feature{
 	.feature{
 		@include clearfix;
 		margin-bottom: 100px;
-		
+
 		.feature-image,.feature-desc{
 			width: 50%;
 			float: left;
@@ -375,7 +375,7 @@
 			font-weight: 700;
 		}
 	}
-	
+
 	.field{
 		margin-bottom: 20px;
 

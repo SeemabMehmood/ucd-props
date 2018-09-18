@@ -1,4 +1,22 @@
 .logo {
-  width: 68px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
+}
+
+.circle-numbered-feature li:before {
+  border: 2px solid #083461;
+  color: #083461;
+}
+
+.post-grid, .site-footer, .hero {
+  background-color: #083461;
+}
+
+#site-content, .site-header, .hero .hero-content,
+.posts-list .post .post-content {
+  background: #e6e6e6;
+}
+
+#branding:after {
+  border-color: #e6e6e6 transparent transparent;
 }
