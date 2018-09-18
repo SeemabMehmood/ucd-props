@@ -5,7 +5,7 @@ default: &default
 
 development:
   <<: *default
-  database: ucd_development
+  database: ucd_database_development
 
 test:
   <<: *default
