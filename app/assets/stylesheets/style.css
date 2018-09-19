@@ -462,7 +462,7 @@ figure img { max-width: 100%; display: block; }
 .homepage .hero { padding: 70px 0;     margin: 0px 100px 100px 100px;}
 .hero .hero-half-background { position: absolute; width: 50%; left: 0; top: 0; bottom: 0; background-size: cover; background-position: right center; }
 @media screen and (max-width: 990px) { .hero .hero-half-background { width: 100%; } }
-.hero .hero-content { background: white; display: inline-block; padding: 30px; border-radius: 5px; color: #7b7a82; position: relative; top: 270px; }
+.hero .hero-content { background: white; display: inline-block; padding: 30px; border-radius: 5px; color: #7b7a82; position: relative; top: 30px; }
 @media screen and (max-width: 990px) { .hero .hero-content { margin-top: 70px; margin-bottom: 50px; top: 0; } }
 .hero .hero-content .hero-title { font-size: 30px; font-size: 2rem; margin: 0 0 20px; color: #5a595e; line-height: 1; font-weight: 400; }
 @media screen and (max-width: 990px) { .hero .request-form { padding: 30px; border-radius: 5px; } }
