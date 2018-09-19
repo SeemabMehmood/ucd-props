@@ -451,9 +451,8 @@ figure img { max-width: 100%; display: block; }
 @media print { .hidden-print { display: none !important; } }
 /* Header Styles */
 .site-header { background: #e6e6e6; text-align: center; height: 165px; position: relative; z-index: 99; }
-
 #branding { position: absolute; display: inline-block; width: 300px; left: 0; right: 0; margin: auto; bottom: -45px; z-index: 1; }
-#branding:after { content: " "; position: absolute; width: 0; border-style: solid; border-width: 100px 150px; border-color: white transparent transparent; left: 0; z-index: -1; top: 70px; }
+#branding:after { content: " "; position: absolute; width: 0; border-style: solid; border-width: 100px 150px; border-color: white transparent transparent; left: 0; z-index: -1; top: 50px; }
 #branding .logo { display: inline-block; margin-bottom: 10px; text-align: center; }
 #branding .site-title { font-size: 15px; font-size: 1rem; text-transform: uppercase; margin: 0; line-height: 20px; }
 #branding .site-title a { color: #5a595e; }
@@ -626,6 +625,10 @@ nav .show-menu span {
   nav { padding: 5px 0 15px 0; }
   nav .nav-logo, nav .nav-links { float: none; width: auto; text-align: center; }
   nav .nav-links { margin-top: 10px; }
+}
+
+@media (max-width: 991px) {
+  .site-header { height: 60px; }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
