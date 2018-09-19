@@ -1,3 +1,17 @@
+ready = ->
+  $(".show-menu").on 'click', (event) ->
+    console.log $(".scroll-link").css("display")
+    if $(".scroll-link").css("display") == "inline-block"
+      $(".scroll-link").hide()
+      $(".scroll-link").css("display", "none")
+    else
+      $(".scroll-link").show()
+      $(".scroll-link").css("display", "inline-block")
+
+$(document).ready ready
+# document.addEventListener 'turbolinks:load', ready
+# document.addEventListener 'turbolinks:render', ready
+
 (($, document, window) ->
   $(document).ready ->
     $('[data-bg-color]').each ->
