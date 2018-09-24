@@ -79,6 +79,10 @@
   background-image: url("dummy/home.jpg");
 }
 
+.hero .sell-image {
+  background-image: url("dummy/sell.jpg");
+}
+
 .contact .hero {
   margin-bottom: 100px;
 }
@@ -87,8 +91,19 @@
   padding: 0px !important;
 }
 
+.google-map {
+  width: 86%;
+  height: 400px;
+  position: relative;
+  margin: 100px;
+  overflow: hidden;
+}
+
 @media (max-width: 767px) {
   .single-service { margin-top: 30px; }
+  .google-map {
+    width: 70%;
+  }
 }
 
 ol, ul {

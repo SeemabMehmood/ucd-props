@@ -16,6 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'flex-slider-rails'
 gem 'wow-rails'
+gem 'gmaps4rails'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

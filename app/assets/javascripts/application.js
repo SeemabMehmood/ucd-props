@@ -15,5 +15,7 @@
 //= require jquery
 //= require jquery.flexslider-min
 //= require wow
+//= require underscore-min
+//= require gmaps/google
 //= require turbolinks
 //= require_tree .
