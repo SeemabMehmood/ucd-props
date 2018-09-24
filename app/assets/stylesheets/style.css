@@ -459,7 +459,7 @@ figure img { max-width: 100%; display: block; }
 #branding .site-description { font-size: 9px; font-size: 0.6rem; letter-spacing: 1px; font-weight: 400; text-transform: uppercase; color: #a8a8b0; line-height: 15px; }
 
 .hero { background: #083461; position: relative; z-index: 1; color: #91909a; }
-.homepage .hero { padding: 70px 0;     margin: 0px 100px 100px 100px;}
+.homepage .hero { padding: 70px 0; margin: 0px 100px 0px 100px;}
 .hero .hero-half-background { position: absolute; width: 50%; left: 0; top: 0; bottom: 0; background-size: cover; background-position: right center; }
 @media screen and (max-width: 990px) { .hero .hero-half-background { width: 100%; } }
 .hero .hero-content { background: white; display: inline-block; padding: 30px; border-radius: 5px; color: #7b7a82; position: relative; top: 30px; }
@@ -518,8 +518,8 @@ figure img { max-width: 100%; display: block; }
 .cta a { color: #5a595e; font-size: 30px; font-size: 2rem; display: inline-block; }
 .cta a.email { padding-bottom: 0; border-bottom: 2px solid #5a595e; }
 
-.single .leading { font-size: 40px; font-size: 2.66667rem; font-weight: 100; line-height: 1.2; }
-.single p { font-size: 18px; font-size: 1.2rem; }
+.leading { font-size: 40px; font-size: 2.66667rem; font-weight: 100; line-height: 1.2; }
+.leading p { font-size: 18px; font-size: 1.2rem; }
 
 .house-feature .feature { *zoom: 1; margin-bottom: 100px; }
 .house-feature .feature:after { content: " "; clear: both; display: block; overflow: hidden; height: 0; }

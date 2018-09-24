@@ -1,6 +1,6 @@
 .logo {
-  width: 50%;
-  height: 82px;
+  width: 53%;
+  height: 88px;
 }
 
 .circle-numbered-feature li:before {
@@ -73,6 +73,18 @@
   -o-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
+}
+
+.hero .about-us-image {
+  background-image: url("dummy/home.jpg");
+}
+
+.contact .hero {
+  margin-bottom: 100px;
+}
+
+.no-pad {
+  padding: 0px !important;
 }
 
 @media (max-width: 767px) {
