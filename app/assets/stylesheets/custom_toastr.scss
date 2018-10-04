@@ -1,0 +1,41 @@
+.toast-info {
+  background: #e6e6e6;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  border-left: 6px solid #3498db;
+}
+
+.toast-success {
+  background: #e6e6e6;
+  border-left: 6px solid #4fb287
+}
+
+.toast-warning {
+  background: #e6e6e6;
+  border-left: 6px solid #ffb606
+}
+
+.toast-error {
+  background: #e6e6e6;
+  border-left: 6px solid #e74c3c
+}
+
+.toast-message {
+  color: #083461;
+}
+
+#toast-container > .toast-info {
+  background-image: none !important;
+}
+
+#toast-container > .toast-success {
+  background-image: none !important;
+}
+
+#toast-container > .toast-warning {
+  background-image: none !important;
+}
+
+#toast-container > .toast-error {
+  background-image: none !important;
+}
