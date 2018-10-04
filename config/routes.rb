@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :properties
+
+    root 'properties#index'
   end
 
   get 'property_management', to: "home#property_management"
