@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
-  def send_email_request
+  def send_sell_request
     if params[:name].present? && params[:email].present? && params[:description].present?
-      HomeMailer.send_email( params[:email], params[:name], params[:description], params[:phone]).deliver_now
+      HomeMailer.send_sell_email( params[:email], params[:name], params[:description], params[:phone]).deliver_now
       message = "You sell property request successfully sent."
     else
       message = "Please fill in the complete form."

@@ -1,5 +1,5 @@
 class HomeMailer < ApplicationMailer
-  def send_email(from, name, description, contact)
+  def send_sell_email(from, name, description, contact)
     @description = description
     @contact = contact
     @name = name
