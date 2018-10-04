@@ -1,6 +1,5 @@
 ready = ->
   $(".show-menu").on 'click', (event) ->
-    console.log $(".scroll-link").css("display")
     if $(".scroll-link").css("display") == "inline-block"
       $(".scroll-link").hide()
       $(".scroll-link").css("display", "none")
