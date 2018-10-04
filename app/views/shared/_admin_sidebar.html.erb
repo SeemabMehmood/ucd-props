@@ -1,0 +1,26 @@
+<div class="sidebar">
+  <div class="sidebar-wrapper">
+    <div class="logo">
+
+      <a href="https://www.ucdproperties.com" class="simple-text">
+        <%= image_tag "ucd-logo.png", class: "logo ucd-logo" %>
+        UCD Properties
+      </a>
+    </div>
+    <ul class="nav">
+      <li>
+        <%= link_to admin_properties_path, class: "nav-link" do %>
+          <i class="fa fa-home"></i>
+          <p>All Properties</p>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to new_admin_property_path, class: "nav-link" do %>
+          <i class="fa fa-plus"></i>
+          <p>Add Property</p>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

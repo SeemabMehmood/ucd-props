@@ -19,4 +19,5 @@
 //= require underscore-min
 //= require gmaps/google
 //= require turbolinks
-//= require_tree .
+//= require common
+//= require home
