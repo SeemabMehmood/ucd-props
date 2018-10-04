@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year_construction: 1
+  bed_count: 1
+  bath: MyString
+
+two:
+  year_construction: 1
+  bed_count: 1
+  bath: MyString
