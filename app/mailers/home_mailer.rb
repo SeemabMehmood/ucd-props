@@ -14,4 +14,12 @@ class HomeMailer < ApplicationMailer
 
     mail from: from
   end
+
+  def send_contact_email(from, name, subject, description, contact)
+    @description = description
+    @contact = contact
+    @name = name
+
+    mail from: from, subject: subject
+  end
 end

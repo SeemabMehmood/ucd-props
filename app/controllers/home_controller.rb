@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def send_sell_request
     if params[:name].present? && params[:email].present? && params[:description].present?
       HomeMailer.send_sell_email( params[:email], params[:name], params[:description], params[:phone]).deliver_now
-      message = "You sell property request successfully sent."
+      message = "You Sell Property request successfully sent."
     else
       message = "Please fill in the complete form."
     end
@@ -17,5 +17,15 @@ class HomeController < ApplicationController
       message = "Please fill in the complete form."
     end
     redirect_to property_management_path, notice: message
+  end
+
+  def send_contact_request
+    if params[:name].present? && params[:email].present? && params[:subject].present? && params[:description].present?
+      HomeMailer.send_contact_email( params[:email], params[:name], params[:subject], params[:description], params[:phone]).deliver_now
+      message = "You Contact request successfully sent."
+    else
+      message = "Please fill in the complete form."
+    end
+    redirect_to contact_us_path, notice: message
   end
 end
