@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :properties
+  end
 
   get 'property_management', to: "home#property_management"
   get 'contact_us', to: "home#contact_us"
