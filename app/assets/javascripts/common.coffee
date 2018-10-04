@@ -8,8 +8,8 @@ ready = ->
       $(".scroll-link").show()
       $(".scroll-link").css("display", "inline-block")
 
-$(document).ready ready
-# document.addEventListener 'turbolinks:load', ready
+# $(document).ready ready
+document.addEventListener 'turbolinks:load', ready
 # document.addEventListener 'turbolinks:render', ready
 
 (($, document, window) ->

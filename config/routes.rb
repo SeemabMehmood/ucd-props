@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get 'about_us', to: "home#about_us"
   get 'sell', to: "home#sell"
 
+  post 'send_email_request', to: 'home#send_email_request'
+
   root 'home#index'
 end
