@@ -1,4 +1,6 @@
 class Property < ApplicationRecord
+  mount_uploader :avatar, AvatarUploader
+
   scope :for_rent, -> { where(for_rent: true) }
   scope :for_sale, -> { where for_sale: true }
   scope :visible,  -> { where visible: true }
