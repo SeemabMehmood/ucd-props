@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'sell', to: "home#sell"
 
   post 'send_sell_request', to: 'home#send_sell_request'
+  post 'send_property_request', to: 'home#send_property_request'
 
   root 'home#index'
 end
