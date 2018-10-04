@@ -1,5 +1,5 @@
 .logo {
-  height: 147px;
+  height: 100px;
 }
 
 .circle-numbered-feature li:before {
@@ -102,6 +102,12 @@
   .single-service { margin-top: 30px; }
   .google-map {
     width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav .container {
+    width: 1239px;
   }
 }
 
