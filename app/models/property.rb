@@ -1,6 +1,11 @@
 class Property < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
+  validate :has_type
+
+  validates :name, :year_construction, :country, :lat, :long, presence: true
+  validates :price, numericality: { greater_than: 0.0 }
+
   scope :for_rent, -> { where(for_rent: true) }
   scope :for_sale, -> { where(for_sale: true) }
   scope :visible,  -> { where(visible: true) }
@@ -22,5 +27,13 @@ class Property < ApplicationRecord
   def type
     return 'Rent' if for_rent
     return 'Sale' if for_sale
+  end
+
+  private
+
+  def has_type
+    if for_sale.blank? && for_rent.blank?
+      errors.add(:base, "Must have at least one type either For Rent or For Sale")
+    end
   end
 end

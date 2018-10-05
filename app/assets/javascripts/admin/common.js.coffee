@@ -1,3 +1,6 @@
+ready = ->
+  $('#error_explanation').hide(90000)
+
 navtoggler = ->
   mobile_menu_visible = 0
 
@@ -37,4 +40,5 @@ navtoggler = ->
       $('html').addClass 'nav-open'
       mobile_menu_visible = 1
 
+document.addEventListener 'turbolinks:load', ready
 document.addEventListener 'turbolinks:load', navtoggler

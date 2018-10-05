@@ -9,7 +9,7 @@ class Admin::PropertiesController < AdminController
   end
 
   def index
-    @properties = Property.send("for_#{params[:type]}")
+    @properties = params[:type].present? ? Property.send("for_#{params[:type]}") : Property.all
   end
 
   def new
