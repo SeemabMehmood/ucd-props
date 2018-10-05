@@ -1,0 +1,151 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"><%= @property.type %> - <%= @property.name %> - <%= @property.year_construction %></h4>
+          <div class="tools">
+            <%= link_to "javascript:history.back()", class: "pull-right btn btn-xs btn-ripple btn-outline-dark" do %>
+              <i class="fa fa-arrow-left"></i>
+            <% end %>
+
+            <%= link_to edit_admin_property_path(@property), class: "pull-right btn btn-xs btn-ripple btn-outline-info" do %>
+              <i class="fa fa-pencil"></i>
+            <% end %>
+          </div>
+
+          <p class="card-category">
+            <i class="fa fa-bed"></i> <%= @property.bed_count %> | <i class="fa fa-shower"></i> <%= @property.bath_count %> | <i class="fa fa-bath"></i> <%= @property.toilet_count %> | <i class="fa fa-car"></i> <%= @property.garage_count %>
+          </p>
+        </div>
+        <div class="card-body">
+          <h4>Details</h4>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title text-center"><i class="fa fa-area-chart"></i></h5>
+                  <hr/>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p>Plot Area: <span class="font-bold"><%= @property.plot_area %></span></p>
+                    </div>
+
+                    <div class="col-sm-6 pad-0">
+                      <p>Construction Area: <span class="font-bold"><%= @property.constructed_area %></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title text-center"><i class="fa fa-certificate"></i></h5>
+                  <hr/>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p>Furnished: <span class="pull-right badge <%= @property.furnished ? 'badge-success' : 'badge-danger'%>"><%= human_boolean(@property.furnished) %></span></p>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p>Reserved: <span class="pull-right badge <%= @property.reserved ? 'badge-success' : 'badge-danger'%>"><%= human_boolean(@property.reserved) %></span></p>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p>Sold: <span class="pull-right badge <%= @property.sold ? 'badge-success' : 'badge-danger'%>"><%= human_boolean(@property.sold) %></span></p>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p>Featured: <span class="pull-right badge <%= @property.featured ? 'badge-success' : 'badge-danger'%>"><%= human_boolean(@property.featured) %></span></p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p>Visible: <span class="pull-right badge <%= @property.visible ? 'badge-success' : 'badge-danger'%>"><%= human_boolean(@property.visible) %></span></p>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p>Archived: <span class="pull-right badge <%= @property.archived ? 'badge-success' : 'badge-danger'%>"><%= human_boolean(@property.archived) %></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title text-center"><i class="fa fa-money"></i></h5>
+                  <hr/>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p>Price: <span class="font-bold badge badge-info">Rs. <%= @property.price %></span></p>
+                    </div>
+
+                    <div class="col-sm-6 pad-0">
+                      <p>Commission: <span class="font-bold badge badge-info">Rs. <%= @property.commission %></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title text-center"><i class="fa fa-map-marker"></i></h5>
+                  <hr/>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p>Street: <span class="font-bold"><%= @property.street_no %></span></p>
+                    </div>
+
+                    <div class="col-sm-5">
+                      <p>Street Name:  <span class="font-bold"><%= @property.street_name %></span></p>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <p>Address:  <span class="font-bold"><%= @property.address %></span></p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p>Postal Code:  <span class="font-bold"><%= @property.postal_code %></span></p>
+                    </div>
+
+                    <div class="col-sm-5">
+                      <p>City:  <span class="font-bold"><%= @property.city %></span></p>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <p>Country:  <span class="font-bold"><%= @property.country %></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,4 +18,9 @@ class Property < ApplicationRecord
   def has_garage
     garage_count && (garage_count > 0)
   end
+
+  def type
+    return 'Rent' if for_rent
+    return 'Sale' if for_sale
+  end
 end

@@ -250,4 +250,8 @@ module AdminHelper
   def form_submit_text(form_object)
     [form_object.new_record? ? "Add" : "Update", form_object.class.name.underscore.humanize.titleize].join(" ")
   end
+
+  def human_boolean(boolean)
+    boolean ? "Yes" : "No"
+  end
 end
