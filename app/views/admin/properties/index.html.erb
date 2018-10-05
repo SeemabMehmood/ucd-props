@@ -1,3 +1,64 @@
 <div class="container-fluid">
-
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card strpied-tabled-with-hover">
+        <div class="card-header ">
+          <h4 class="card-title"><%= params[:type].titleize %> Properties List</h4>
+          <p class="card-category">Total: <%= @properties.count %></p>
+        </div>
+        <div class="card-body table-full-width table-responsive">
+          <table class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year Construction</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Price</th>
+                <th>Furnished</th>
+                <th>Sold</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @properties.each do |property| %>
+                <tr>
+                  <td><%= property.name %></td>
+                  <td><%= property.year_construction %></td>
+                  <td><%= property.city %></td>
+                  <td><%= property.country %></td>
+                  <td><span class="badge badge-info">Rs. <%= property.price %></span></td>
+                  <td>
+                    <% if property.furnished %>
+                      <span class="badge badge-success">Yes</span>
+                    <% else %>
+                      <span class="badge badge-warning">No</span>
+                    <% end %>
+                  </td>
+                  <td>
+                    <% if property.sold %>
+                      <span class="badge badge-success">Yes</span>
+                    <% else %>
+                      <span class="badge badge-warning">No</span>
+                    <% end %>
+                  </td>
+                  <td>
+                    <%= link_to edit_admin_property_path(property) do %>
+                      <i class="fa fa-pencil"></i>
+                    <% end %>
+                  </td>
+                  <td>
+                    <%= link_to admin_property_path(property) do %>
+                      <i class="fa fa-eye"></i>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

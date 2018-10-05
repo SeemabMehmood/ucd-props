@@ -22,11 +22,22 @@
         <% end %>
       </li>
 
-      <li>
-        <%= link_to admin_properties_path, class: "nav-link" do %>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
           <i class="fa fa-home"></i>
-          <p>All Properties</p>
-        <% end %>
+          <span>Properties</span>
+        </a>
+        <ul class="dropdown-menu">
+          <%= link_to admin_properties_path(type: 'rent'), class: "dropdown-item" do %>
+            <i class="fa fa-home"></i>
+            <span>For Rent</span>
+          <% end %>
+
+          <%= link_to admin_properties_path(type: 'sale'), class: "dropdown-item" do %>
+            <i class="fa fa-shopping-cart"></i>
+            <span>For Sale</span>
+          <% end %>
+        </ul>
       </li>
     </ul>
   </div>

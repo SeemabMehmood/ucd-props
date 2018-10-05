@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg " color-on-scroll="500">
   <div class=" container-fluid  ">
-    <a class="navbar-brand" href="#pablo"> <%= action_name.titleize %> </a>
+    <a class="navbar-brand" href="#pablo"> <%= controller_name.titleize %> <%= action_name.titleize %> </a>
     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-label="Toggle navigation">
       <span class="navbar-toggler-bar burger-lines"></span>
       <span class="navbar-toggler-bar burger-lines"></span>
@@ -10,7 +10,7 @@
       <ul class="nav navbar-nav mr-auto">
         <li class="nav-item">
           <a href="#" class="nav-link" data-toggle="dropdown">
-            <span class="d-lg-none"><%= action_name.titleize %></span>
+            <span class="d-lg-none"><%= controller_name.titleize %> <%= action_name.titleize %></span>
           </a>
         </li>
       </ul>
