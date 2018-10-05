@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3><%= @featured_count %></h3>
+        </div>
+        <div class="card-body">
+          <i class="fa fa-star"></i> Featured Properties
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3><%= @reserved_count %></h3>
+        </div>
+        <div class="card-body">
+          <i class="fa fa-ticket"></i> Reserved Properties
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3><%= @rent_count %></h3>
+        </div>
+        <div class="card-body">
+          <i class="fa fa-home"></i> Properties for Rent
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3><%= @sale_count %></h3>
+        </div>
+        <div class="card-body">
+          <i class="fa fa-shopping-cart"></i> Properties for Sale
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,9 +2,10 @@ class Property < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   scope :for_rent, -> { where(for_rent: true) }
-  scope :for_sale, -> { where for_sale: true }
-  scope :visible,  -> { where visible: true }
-  scope :featured, -> { where featured: true }
+  scope :for_sale, -> { where(for_sale: true) }
+  scope :visible,  -> { where(visible: true) }
+  scope :featured, -> { where(featured: true) }
+  scope :reserved, -> { where(reserved: true) }
   scope :for_price_from, -> (minimum_price) { where("price >= ?", minimum_price.to_s) }
   scope :for_price_till, -> (maximum_price) { where("price <= ?", maximum_price.to_s) }
   scope :count_bathrooms, -> (min_count_bathrooms) { where("bath_count >= ?", min_count_bathrooms.to_s) }

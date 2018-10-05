@@ -9,9 +9,9 @@
     </div>
     <ul class="nav">
       <li>
-        <%= link_to admin_properties_path, class: "nav-link" do %>
-          <i class="fa fa-home"></i>
-          <p>All Properties</p>
+        <%= link_to admin_root_path, class: "nav-link" do %>
+          <i class="fa fa-dashboard"></i>
+          <p>Dashboard</p>
         <% end %>
       </li>
 
@@ -19,6 +19,13 @@
         <%= link_to new_admin_property_path, class: "nav-link" do %>
           <i class="fa fa-plus"></i>
           <p>Add Property</p>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to admin_properties_path, class: "nav-link" do %>
+          <i class="fa fa-home"></i>
+          <p>All Properties</p>
         <% end %>
       </li>
     </ul>

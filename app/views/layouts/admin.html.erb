@@ -21,7 +21,15 @@
       <%= render partial: "shared/admin_sidebar" %>
       <%= render partial: "shared/flash_messages" %>
 
-      <%= yield %>
+      <div class="main-panel">
+        <%= render partial: "shared/admin_nav" %>
+
+        <div class="content">
+          <%= yield %>
+        </div>
+
+        <%= render partial: "shared/admin_footer" %>
+      </div>
     </div>
   </body>
 </html>
