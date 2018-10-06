@@ -36,7 +36,7 @@ class Admin::PropertiesController < AdminController
                                     :price, :commission, :lat, :long, :street_no, :street_name,
                                     :address, :region, :province, :city, :postal_code, :country,
                                     :furnished, :sold, :reserved, :archived, :visible, :featured,
-                                    :for_rent, :for_sale)
+                                    :for_rent, :for_sale, :avatar)
   end
 
   def set_property

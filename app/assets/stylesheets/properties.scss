@@ -1,0 +1,146 @@
+.pg-opt {
+  border-bottom: 1px solid #083461;
+  border-top: 1px solid #083461;
+  background: #e8e8e8;
+  color: #083461;
+}
+
+.pg-opt h2 {
+  margin: 0;
+  padding: 16px 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: capitalize;
+  color: #083461;
+}
+
+section.slice {
+  padding: 30px 0;
+}
+
+.bb {
+  border-bottom: 1px solid #083461;
+}
+
+.fp-section:before, .fp-section:after {
+  display: table;
+  content: " ";
+}
+
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-inner .item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+.carousel-inner>img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1;
+}
+
+.fp-block.property.list .fp-block-footer.style2 ul.aux-info {
+  display: table;
+  width: 100%;
+  border: 1px solid #083461;
+}
+
+.fp-block.property.list .fp-block-footer.style2 ul.aux-info {
+  margin-top: 9px;
+}
+
+.fp-block.property.list .fp-block-footer.style2 ul.aux-info li {
+  font-size: 14px;
+  padding: 10px 10px;
+  text-align: center;
+  width: 25%;
+}
+
+.table-bordered {
+  border: 1px solid #083461;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-striped >tbody > tr:nth-of-type(odd) {
+  background-color: #e6e7e8;
+}
+
+.table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td {
+  border: 1px solid #083461;
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+}
+
+
+.panel {
+  color: #083461;
+  margin-bottom: 20px;
+  background-color: #e6e7e8;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.panel-default>.panel-heading {
+  color: #333333;
+  background-color: #f5f5f5;
+  border-color: #083461;
+}
+
+.panel-default {
+  border-color: #083461;
+}
+
+.contact-info-panel-body {
+  padding: 0px 15px;
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.product-info {
+  color: #083461;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.mi_form {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.contact-info h4 {
+  margin-bottom: 2px;
+}
+
+.contact-info h5 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}

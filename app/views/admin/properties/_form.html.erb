@@ -151,6 +151,13 @@
   </div>
 
   <div class="row">
+    <div class="col-md-6">
+      <%= form.label :avatar %>
+      <%= form.file_field :avatar, title: "Please Upload Property Image", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-2 pr-1">
       <div class="form-check">
         <%= form.label :furnished, class: "form-check-label" do %>
@@ -223,6 +230,9 @@
           <span class="form-check-sign"></span>
         <% end %>
       </div>
+    </div>
+
+    <div class="col-md-2 pr-1">
     </div>
   </div>
 
