@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="card">
+        <%= image_tag @property.avatar_url, class: "card-img-top" %>
         <div class="card-header">
           <h4 class="card-title"><%= @property.type %> - <%= @property.name %> - <%= @property.year_construction %></h4>
           <div class="tools">
