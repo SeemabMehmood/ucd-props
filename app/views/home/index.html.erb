@@ -41,70 +41,62 @@
   <div class="fullwidth-block">
     <div class="container">
       <header data-bg-color="#083461">
-        <h2 class="section-title">Consequat erat velit phasellus</h2>
-        <p class="section-desc"> Aliquam malesuada accumsan quam sit amet hendrerit. <br> Aliquam ut eros nec massa tristique pellentesque quis quis diam.</p>
+        <h2>Top Featured Properties</h2>
       </header>
 
       <div class="posts-list">
-        <div class="post">
-          <div class="post-content">
-            <figure class="featured-image">
-              <%= image_tag "dummy/small-thumb-1" %>
-            </figure>
-            <h2 class="entry-title"><a href="house.html">Nullam mi lacus iacullis magna</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat quas, fugit asperiores adipisci maxime</p>
-            <strong class="price">$279.00</strong>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post-content">
-            <figure class="featured-image">
-              <%= image_tag "dummy/small-thumb-2" %>
-            </figure>
-            <h2 class="entry-title"><a href="house.html">Nullam mi lacus iacullis magna</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat quas, fugit asperiores adipisci maxime</p>
-            <strong class="price">$279.00</strong>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post-content">
-            <figure class="featured-image">
-              <%= image_tag "dummy/small-thumb-3" %>
-            </figure>
-            <h2 class="entry-title"><a href="house.html">Nullam mi lacus iacullis magna</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat quas, fugit asperiores adipisci maxime</p>
-            <strong class="price">$279.00</strong>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post-content">
-            <figure class="featured-image">
-              <%= image_tag "dummy/small-thumb-4" %>
-            </figure>
-            <h2 class="entry-title"><a href="house.html">Nullam mi lacus iacullis magna</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat quas, fugit asperiores adipisci maxime</p>
-            <strong class="price">$279.00</strong>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post-content">
-            <figure class="featured-image">
-              <%= image_tag "dummy/small-thumb-5" %>
-            </figure>
-            <h2 class="entry-title"><a href="house.html">Nullam mi lacus iacullis magna</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat quas, fugit asperiores adipisci maxime</p>
-            <strong class="price">$279.00</strong>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post-content">
-            <figure class="featured-image">
-              <%= image_tag "dummy/small-thumb-6" %>
-            </figure>
-            <h2 class="entry-title"><a href="house.html">Nullam mi lacus iacullis magna</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat quas, fugit asperiores adipisci maxime</p>
-            <strong class="price">$279.00</strong>
-          </div>
+        <div class="row">
+          <% @featured_props.each do |featured_property| %>
+            <div class="col-md-4">
+              <div class="fp-block property white list">
+                <%= link_to property_path(featured_property) do %>
+                  <div class="figure">
+                    <%= image_tag featured_property.avatar_url, class: "img-responsive" %>
+                  </div>
+                <% end %>
+                <div class="fp-block-body">
+                  <h2 class="title overflow-elip">
+                    <%= link_to featured_property.name, property_path(featured_property) %>
+                  </h2>
+                  <h2 class="subtitle">
+                    <div>
+                      <span class="precio negrita">
+                        Rs. <%= featured_property.price %>
+                      </span>
+                    </div>
+                  </h2>
+                </div>
+                <div class="fp-block-footer">
+                  <ul class="aux-info">
+                    <li class="hidden-xs">
+                      <i class="fa fa-bed"></i>
+                      <small>
+                        <%= featured_property.bed_count %>
+                      </small>
+                    </li>
+                    <li class="hidden-xs">
+                      <i class="fa fa-shower"></i>
+                      <small>
+                        <%= featured_property.bath_count %>
+                      </small>
+                    </li>
+                    <li class="hidden-xs">
+                      <i class="fa fa-arrows-alt"></i>
+                      <small>
+                        <%= featured_property.plot_area %><sup>2</sup>
+                      </small>
+                    </li>
+                    <li class="hidden-xs">
+                      <i class="fa fa-car"></i>
+                      <small>
+                        <%= featured_property.garage_count %>
+                      </small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
 

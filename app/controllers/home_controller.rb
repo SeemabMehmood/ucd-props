@@ -1,4 +1,9 @@
 class HomeController < ApplicationController
+
+  def index
+    @featured_props = Property.featured.ordered.first(6)
+  end
+
   def send_sell_request
     if params[:name].present? && params[:email].present? && params[:description].present?
       HomeMailer.send_sell_email( params[:email], params[:name], params[:description], params[:phone]).deliver_now

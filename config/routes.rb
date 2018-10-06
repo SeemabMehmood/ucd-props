@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root 'properties#dashboard'
   end
 
+  resources :properties, only: [:index, :show]
   get 'property_management', to: "home#property_management"
   get 'contact_us', to: "home#contact_us"
   get 'about_us', to: "home#about_us"

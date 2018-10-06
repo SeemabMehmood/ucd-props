@@ -1,0 +1,32 @@
+<%= form_tag send_property_request_path, remote: true, class: "form-light mi-form" do %>
+  <div class="field">
+    <div class="form-group">
+      <%= label_tag :name, "Name", class: "control-label" %>
+      <%= text_field_tag :name, "", required: true, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="field-column row">
+    <div class="col-sm-6">
+      <div class="field">
+        <%= label_tag :email, "Email", class: "control-label" %>
+        <%= text_field_tag :email, "", required: true, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="field">
+        <%= label_tag :phone, "Phone", class: "control-label" %>
+        <%= text_field_tag :phone, "", required: true, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="form-group">
+      <%= label_tag :description, "Description", class: "control-label" %>
+      <%= text_area_tag :description, "", required: true, class: "form-control" %>
+    </div>
+  </div>
+  <%= submit_tag "Send Request" %>
+<% end %>
