@@ -1,4 +1,6 @@
 <%= form_tag send_property_request_path, remote: true, class: "form-light mi-form" do %>
+  <%= hidden_field_tag :property_id, @property.id %>
+
   <div class="field">
     <div class="form-group">
       <%= label_tag :name, "Name", class: "control-label" %>

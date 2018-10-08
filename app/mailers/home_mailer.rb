@@ -7,10 +7,11 @@ class HomeMailer < ApplicationMailer
     mail from: from
   end
 
-  def send_property_email(from, name, description, contact)
+  def send_property_email(from, name, description, contact, property_id)
     @description = description
     @contact = contact
     @name = name
+    @property = Property.find(property_id) if property_id.present?
 
     mail from: from
   end
