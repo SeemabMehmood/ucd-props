@@ -2,6 +2,8 @@ class HomeController < ApplicationController
 
   def index
     @featured_props = Property.featured.ordered.first(6)
+    @sale_prop = Property.for_sale.ordered.first
+    @rent_prop = Property.for_rent.ordered.first
   end
 
   def send_sell_request
