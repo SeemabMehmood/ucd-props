@@ -5,7 +5,7 @@
         <%= image_tag "ucd-logo.png", class: "logo"%>
       </div>
       <div class="col-sm-10 nav-links pull-right">
-        <%= link_to "Home", root_path, class: "#{ active_class('index') } scroll-link button-1" %>
+        <%= link_to "Home", root_path, class: "#{ active_class('home') } scroll-link button-1" %>
 
         <%= link_to "Buy", properties_path(type: "sale"), class: "#{active_class(properties_path(type: 'sale'))} scroll-link button-1" %>
 
