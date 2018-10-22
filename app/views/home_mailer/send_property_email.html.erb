@@ -1,5 +1,8 @@
 <h1>Property Management Mail</h1>
 
+<% if @property.present? %>
+  The following person has requested information for this property: <%= link_to @property.name.titleize, property_url(@property.id) %>
+<% end %>
 <p>
   <%= @name %> with the contact details <%= @contact %> sent you following message:
 </p>

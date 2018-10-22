@@ -144,3 +144,87 @@ section.slice {
   font-weight: 500;
   margin-bottom: 4px;
 }
+
+.carousel-inner .item img {
+  max-height: 220px;
+  max-width: 250px;
+}
+
+ul.list-listings>li {
+  margin-bottom: 30px;
+  border: 1px solid #083461;
+  border-radius: 2px;
+}
+
+.cuadro_inmueble {
+  position: relative;
+}
+
+.prop-listing-image {
+  padding: 0px;
+}
+
+.prop-listing-image div.prop-figure {
+  display: block;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  background: #eee;
+}
+
+.prop-listing-image div.prop-figure img {
+    display: block;
+    min-height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.prop-listing-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.prop-listing-text {
+    padding: 0px 10px;
+    min-height: 165px;
+}
+
+.prop-listing-text h3 {
+    margin-top: 10px;
+}
+
+.truncated_description {
+    display: block;
+    overflow: hidden;
+    height: 45%;
+    position: absolute;
+}
+
+.prop-listing-body .meta-info {
+    padding: 0px;
+    border-top: 1px solid #083461;
+}
+
+.ver_inmueble, .action_link {
+    color: #083461;
+}
+
+.ver_inmueble {
+    position: absolute;
+    right: 40px;
+    bottom: 35px;
+}
+
+.prop-listing-body .meta-info ul {
+    display: flex;
+    padding-left: 0px;
+}
+
+.prop-listing-body .meta-info ul li {
+    border-right: 1px solid #083461;
+    padding: 3px 25px;
+    color: #083461;
+}

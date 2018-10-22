@@ -40,7 +40,7 @@
 
   <div class="fullwidth-block">
     <div class="container">
-      <header data-bg-color="#083461">
+      <header class="bg-blue">
         <h2>Top Featured Properties</h2>
       </header>
 
@@ -101,35 +101,111 @@
       </div>
 
       <p class="text-center">
-        <a href="house.html" class="button">See more houses</a>
+        <%= link_to "See More", properties_path, class: "button" %>
       </p>
-    </div> <!-- .container -->
-  </div> <!-- .fullwidth-block -->
+    </div>
+  </div>
 
   <div class="fullwidth-block">
     <div class="container">
       <div class="post-grid">
-        <div class="post">
-          <figure class="featured-image">
-            <%= image_tag "dummy/large-thumb-1" %>
-          </figure>
-          <div class="post-detail">
-            <h2 class="entry-title"><a href="house.html">Donec bibendum est lobortis molestie auctor lorem</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt temporibus voluptates id praesentium nihil. Aspernatur, quo. Est laboriosam consectetur atque quo eius. Libero excepturi quam dolorum quia sapiente, saepe velit!</p>
-            <span class="arrow"></span>
-          </div> <!-- .post-detail -->
-        </div> <!-- .post -->
-        <div class="post">
-          <figure class="featured-image">
-            <%= image_tag "dummy/large-thumb-1" %>
-          </figure>
-          <div class="post-detail">
-            <h2 class="entry-title"><a href="house.html">Donec bibendum est lobortis molestie auctor lorem</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt temporibus voluptates id praesentium nihil. Aspernatur, quo. Est laboriosam consectetur atque quo eius. Libero excepturi quam dolorum quia sapiente, saepe velit!</p>
-            <span class="arrow"></span>
-          </div> <!-- .post-detail -->
-        </div> <!-- .post -->
-      </div> <!-- .post-grid -->
-    </div> <!-- .container -->
-  </div> <!-- .fullwidth-block -->
+        <% if @sale_prop.present? %>
+          <div class="post">
+            <figure class="featured-image">
+              <%= link_to property_path(@sale_prop) do %>
+                <%= image_tag @sale_prop.avatar_url %>
+              <% end %>
+            </figure>
+            <div class="post-detail">
+              <h2 class="entry-title">Newest Property for Sale</h2>
+              <h4><span>Name: </span><%= @sale_prop.name.titleize %></h4>
+              <h4><span>Price: </span>Rs. <%= @sale_prop.price %></h4>
+              <div class="fp-block-footer">
+                <ul class="aux-info">
+                  <li class="hidden-xs">
+                    <i class="fa fa-bed"></i>
+                    <small>
+                      <%= @sale_prop.bed_count %>
+                    </small>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-shower"></i>
+                    <small>
+                      <%= @sale_prop.bath_count %>
+                    </small>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-arrows-alt"></i>
+                    <small>
+                      <%= @sale_prop.plot_area %><sup>2</sup>
+                    </small>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-car"></i>
+                    <small>
+                      <%= @sale_prop.garage_count %>
+                    </small>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-bath"></i>
+                    <small>
+                      <%= @sale_prop.toilet_count %>
+                    </small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <% if @rent_prop.present? %>
+          <div class="post">
+            <figure class="featured-image">
+              <%= link_to property_path(@rent_prop) do %>
+                <%= image_tag @rent_prop.avatar_url %>
+              <% end %>
+            </figure>
+            <div class="post-detail">
+              <h2 class="entry-title">Newest Property for Rent</h2>
+              <h4><span>Name: </span><%= @rent_prop.name.titleize %></h4>
+              <h4><span>Price: </span>Rs. <%= @rent_prop.price %></h4>
+              <div class="fp-block-footer">
+                <ul class="aux-info">
+                  <li class="hidden-xs">
+                    <i class="fa fa-bed"></i>
+                    <small>
+                      <%= @rent_prop.bed_count %>
+                    </small>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-shower"></i>
+                    <small>
+                      <%= @rent_prop.bath_count %>
+                    </small>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-arrows-alt"></i>
+                    <small>
+                      <%= @rent_prop.plot_area %><sup>2</sup>
+                    </small>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-car"></i>
+                    <small>
+                      <%= @rent_prop.garage_count %>
+                    </small>
+                  </li>
+                  <li class="hidden-xs">
+                    <i class="fa fa-bath"></i>
+                    <small>
+                      <%= @rent_prop.toilet_count %>
+                    </small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

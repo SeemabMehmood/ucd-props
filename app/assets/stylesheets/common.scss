@@ -2,6 +2,15 @@
   height: 100px;
 }
 
+.bg-blue {
+  background: #083461;
+}
+
+.post-grid .featured-image img {
+  width: 605px;
+  height: 370px;
+}
+
 .circle-numbered-feature li:before {
   border: 2px solid #083461;
   color: #083461;
@@ -137,7 +146,7 @@ ul.aux-info {
   padding: 0;
   display: block;
   background: #083461;
-  border-top: 1px solid #e0eded;
+  border: 1px solid #e0eded;
 }
 
 ul.aux-info li {
