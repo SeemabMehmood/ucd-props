@@ -144,3 +144,8 @@ section.slice {
   font-weight: 500;
   margin-bottom: 4px;
 }
+
+.carousel-inner .item img {
+  max-height: 220px;
+  max-width: 250px;
+}
