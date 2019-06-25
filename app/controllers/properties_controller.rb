@@ -5,5 +5,6 @@ class PropertiesController < ApplicationController
 
   def index
     @properties = params[:type].present? ? Property.send("for_#{params[:type]}") : Property.all
+    @properties = @properties.ordered
   end
 end
