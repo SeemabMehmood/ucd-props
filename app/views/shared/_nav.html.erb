@@ -7,9 +7,9 @@
       <div class="col-sm-10 nav-links pull-right">
         <%= link_to "Home", root_path, class: "#{ active_class('home') } scroll-link button-1" %>
 
-        <%= link_to "Buy", properties_path(type: "sale"), class: "#{active_class(properties_path(type: 'sale'))} scroll-link button-1" %>
+        <%= link_to "Buy", properties_path(type: "sale"), class: "#{active_class(properties_path(type: 'sale'))} scroll-link button-1", id: "sale-prop" %>
 
-        <%= link_to "Rent", properties_path(type: "rent"), class: "#{active_class(properties_path(type: 'rent'))} scroll-link button-1" %>
+        <%= link_to "Rent", properties_path(type: "rent"), class: "#{active_class(properties_path(type: 'rent'))} scroll-link button-1", id: "rent-prop" %>
 
         <%= link_to "Sell", sell_path, class: "#{active_class('sell_path')} scroll-link button-1" %>
 

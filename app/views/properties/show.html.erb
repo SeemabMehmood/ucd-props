@@ -161,4 +161,11 @@
       }
     ]);
   });
+
+  <% if @property.type == 'Sale' %>
+    $('#sale-prop').addClass('active');
+  <% else %>
+    $('#rent-prop').addClass('active');
+  <% end %>
+
 </script>
