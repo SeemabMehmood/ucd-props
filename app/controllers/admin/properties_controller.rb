@@ -28,6 +28,16 @@ class Admin::PropertiesController < AdminController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @property.save
+        format.html { redirect_to [:admin, @property], notice: 'Property was successfully created.' }
+      else
+        format.html { render "admin/properties/#{@property.id}/edit" }
+      end
+    end
+  end
+
   private
 
   def property_params
