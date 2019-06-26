@@ -38,6 +38,12 @@ class Admin::PropertiesController < AdminController
     end
   end
 
+  def destroy
+    type = @property.type
+    @property.destroy
+    redirect_to admin_properties_path(type: type.downcase)
+  end
+
   private
 
   def property_params

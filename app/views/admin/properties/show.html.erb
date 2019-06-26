@@ -10,9 +10,14 @@
               <i class="fa fa-arrow-left"></i>
             <% end %>
 
+            <%= link_to admin_property_path(@property), method: :delete, data: { confirm: "Are you sure?" }, class: "pull-right btn btn-xs btn-ripple btn-outline-info" do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
+
             <%= link_to edit_admin_property_path(@property), class: "pull-right btn btn-xs btn-ripple btn-outline-info" do %>
               <i class="fa fa-pencil"></i>
             <% end %>
+
           </div>
 
           <p class="card-category">
