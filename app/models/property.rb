@@ -1,6 +1,20 @@
 class Property < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
+  PRICE_SALE = [25000, 50000, 75000, 100000,
+                150000, 250000, 500000, 1000000,
+                2000000, 5000000, 10000000]
+
+  PRICE_RENT = [250, 500, 750, 1000,
+                1500, 2500, 5000, 10000,
+                20000, 50000]
+
+  TYPE = ["Apartment", "Bungalow", "Chalet",
+          "Commercial Premises", "Country House", "Flat",
+          "Garage", "Hotel", "Investment", "Land", "Penthouse",
+          "Residential Building", "Semi-detached", "Studio",
+          "Villa", "Warehouse"]
+
   validate :has_type
 
   validates :name, :year_construction, :country, :lat, :long, presence: true

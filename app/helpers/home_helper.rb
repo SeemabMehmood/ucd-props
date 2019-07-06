@@ -12,4 +12,7 @@ module HomeHelper
     image_tag "http://maps.googleapis.com/maps/api/staticmap?#{query_string}&key=AIzaSyBjqTiOhbq6PiOEciPwtEEigf5VchFFsZc", alt: location[:name]
   end
 
+  def rent_type?
+    params[:type] == "rent"
+  end
 end

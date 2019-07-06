@@ -1,52 +1,57 @@
-<form action="/search_ajax_for_sale.js" accept-charset="UTF-8" data-remote="true" method="post" class="simple_form form-light"><input name="utf8" type="hidden" value="✓">
+<%= form_tag search_property_path, method: :post, remote: true, class: "simple_form form-light" do %>
+
+  <%= hidden_field_tag :type, params[:type] %>
+
   <div class="row div_precios_venta">
+
     <div class="col-sm-6">
       <div class="form-group select optional search_for_sale_price_from">
-        <label for="search_for_sale_price_from" class="control-label select optional">Price From</label>
-        <select name="search[for_sale_price_from]" id="search_for_sale_price_from" class="form-control select optional"> <option value="10,000,000">10,000,000</option>
-        </select>
+        <%= label_tag :price_from, rent_type? ? "Rent From (Monthly)" : "Price From", class: "control-label select optional" %>
+
+        <% if rent_type? %>
+          <%= select_tag :price_from, options_for_select(Property::PRICE_RENT.collect { |p| number_with_delimiter(p, delimeter: ',') } ), prompt: "Select" %>
+        <% else %>
+          <%= select_tag :price_from, options_for_select(Property::PRICE_SALE.collect { |p| number_with_delimiter(p, delimeter: ',') } ), prompt: "Select" %>
+        <% end %>
       </div>
     </div>
 
     <div class="col-sm-6">
       <div class="form-group select optional search_for_sale_price_till">
-        <label for="search_for_sale_price_till" class="control-label select optional">Price Till</label>
-        <select name="search[for_sale_price_till]" id="search_for_sale_price_till" class="form-control select optional">
-          <option value=""></option> <option value="25,000">25,000</option>
-        </select>
+        <%= label_tag :price_till, rent_type? ? "Rent Till (Monthly)" : "Price Till", class: "control-label select optional" %>
+
+        <% if rent_type? %>
+          <%= select_tag :price_till, options_for_select(Property::PRICE_RENT.collect { |p| number_with_delimiter(p, delimeter: ',') } ), prompt: "Select" %>
+        <% else %>
+          <%= select_tag :price_till, options_for_select(Property::PRICE_SALE.collect { |p| number_with_delimiter(p, delimeter: ',') } ), prompt: "Select" %>
+        <% end %>
       </div>
     </div>
   </div>
+
   <div class="form-group select optional search_property_type">
-    <label for="search_property_type" class="control-label select optional">Property Type</label>
-    <select name="search[property_type]" id="search_property_type" class="form-control select optional">
-      <option value=""></option> <option value="propertyTypes.apartamento">Apartment</option> <option value="propertyTypes.bungalow">Bungalow</option> <option value="propertyTypes.chaletIndependiente">Chalet</option> <option value="propertyTypes.local">Commercial premises</option> <option value="propertyTypes.casaRural">Country House</option> <option value="propertyTypes.piso">Flat</option> <option value="propertyTypes.garaje">Garage</option> <option value="propertyTypes.hotel">Hotel</option> <option value="propertyTypes.inversion">Investment</option> <option value="propertyTypes.solar">Land</option> <option value="propertyTypes.atico">Penthouse</option> <option value="propertyTypes.edificioResidencial">Residential building</option> <option value="propertyTypes.chaletAdosado">Semi-detached</option> <option value="propertyTypes.estudio">Studio</option> <option value="propertyTypes.villa">Villa</option> <option value="propertyTypes.trastero">Warehouse</option>
-    </select>
+    <%= label_tag :property_type, "Property Type", class: "control-label select optional" %>
+    <%= select_tag :property_type, options_for_select(Property::TYPE), prompt: "Select Property Type" %>
   </div>
 
   <div class="row div_precios_venta">
     <div class="col-sm-6">
       <div class="form-group select optional search_count_bedrooms">
-        <label for="search_count_bedrooms" class="control-label select optional">Bedrooms (min)</label>
-        <select name="search[count_bedrooms]" id="search_count_bedrooms" class="form-control select optional">
-          <option value="0">0</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option> <option value="16">16</option> <option value="17">17</option> <option value="18">18</option> <option value="19">19</option> <option value="20">20</option> <option value="21">21</option> <option value="22">22</option> <option value="23">23</option> <option value="24">24</option> <option value="25">25</option> <option value="26">26</option> <option value="27">27</option> <option value="28">28</option> <option value="29">29</option> <option value="30">30</option> <option value="31">31</option> <option value="32">32</option> <option value="33">33</option> <option value="34">34</option> <option value="35">35</option> <option value="36">36</option> <option value="37">37</option> <option value="38">38</option> <option value="39">39</option> <option value="40">40</option> <option value="41">41</option> <option value="42">42</option> <option value="43">43</option> <option value="44">44</option> <option value="45">45</option> <option value="46">46</option> <option value="47">47</option> <option value="48">48</option> <option value="49">49</option> <option value="50">50</option>
-        </select>
+        <%= label_tag :bedrooms, "Bedrooms (min)", class: "control-label select optional" %>
+        <%= select_tag :bedrooms, options_for_select((0..50).to_a), prompt: "Select" %>
       </div>
     </div>
 
     <div class="col-sm-6">
       <div class="form-group select optional search_count_bathrooms">
-        <label for="search_count_bathrooms" class="control-label select optional">Bathrooms (min)</label>
-        <select name="search[count_bathrooms]" id="search_count_bathrooms" class="form-control select optional">
-          <option value="0">0</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option> <option value="16">16</option> <option value="17">17</option> <option value="18">18</option> <option value="19">19</option> <option value="20">20</option>
-        </select>
+        <%= label_tag :bathrooms, "Bathrooms (min)", class: "control-label select optional" %>
+        <%= select_tag :bathrooms, options_for_select((0..20).to_a), prompt: "Select" %>
       </div>
     </div>
   </div>
   <div>
-    <br>
-    <button name="button" type="submit" id="btn_buscar_inmuebles" class="button btn fondo_accion btn-icon">
+    <%= button_tag type: :submit, class: "button btn fondo_accion btn-icon" do %>
       <i class="fa fa-search"></i>Search
-    </button>
+    <% end %>
   </div>
-</form>
+<% end %>
