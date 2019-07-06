@@ -26,3 +26,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# solr default folders
+/solr/data
+/solr/test/data
+/solr/development/data
+/solr/default/data
+/solr/pids
