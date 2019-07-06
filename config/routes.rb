@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post 'send_property_request', to: 'home#send_property_request'
   post 'send_contact_request', to: 'home#send_contact_request'
 
-  post 'search', to: 'property#search', as: 'search_property'
+  post 'search', to: 'properties#search', as: 'search_property'
 
   root 'home#index'
 end

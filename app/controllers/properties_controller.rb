@@ -7,4 +7,7 @@ class PropertiesController < ApplicationController
     @properties = params[:type].present? ? Property.send("for_#{params[:type]}") : Property.all
     @properties = @properties.ordered
   end
+
+  def search
+  end
 end
