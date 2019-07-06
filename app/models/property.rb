@@ -44,6 +44,10 @@ class Property < ApplicationRecord
     return 'Sale' if for_sale
   end
 
+  def get_property_type
+    property_type ? property_type : "Unknown"
+  end
+
   private
 
   def has_type
