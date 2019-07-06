@@ -30,8 +30,8 @@ class Admin::PropertiesController < AdminController
 
   def update
     respond_to do |format|
-      if @property.save
-        format.html { redirect_to [:admin, @property], notice: 'Property was successfully created.' }
+      if @property.update_attributes(property_params)
+        format.html { redirect_to [:admin, @property], notice: 'Property was successfully updated.' }
       else
         format.html { render "admin/properties/#{@property.id}/edit" }
       end
@@ -52,7 +52,7 @@ class Admin::PropertiesController < AdminController
                                     :price, :commission, :lat, :long, :street_no, :street_name,
                                     :address, :region, :province, :city, :postal_code, :country,
                                     :furnished, :sold, :reserved, :archived, :visible, :featured,
-                                    :for_rent, :for_sale, :avatar)
+                                    :for_rent, :for_sale, :avatar, :property_type)
   end
 
   def set_property

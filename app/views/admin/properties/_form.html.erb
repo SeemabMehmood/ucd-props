@@ -155,6 +155,11 @@
       <%= form.label :avatar %>
       <%= form.file_field :avatar, title: "Please Upload Property Image", class: "form-control" %>
     </div>
+
+    <div class="col-md-6">
+      <%= form.label :property_type %>
+      <%= form.select :property_type, Property::TYPE, { prompt: "- Select Property Type -" }, class: "form-control" %>
+    </div>
   </div>
 
   <div class="row">
