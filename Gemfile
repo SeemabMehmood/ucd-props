@@ -21,8 +21,6 @@ gem 'toastr-rails'
 gem 'carrierwave'
 gem 'bootstrap', '~> 4.0.0'
 gem 'popper'
-gem 'sunspot_rails'
-
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
@@ -34,6 +32,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rb-readline'
 end
 
 group :test do
