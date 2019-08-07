@@ -15,12 +15,12 @@ private
 
     if params[:price_from].present?
       if params[:price_till].blank?
-        properties = Property.for_price_from(params[:price_from].delete(',').to_f)
+        properties = properties.for_price_from(params[:price_from].delete(',').to_f)
       else
-        properties = Property.price_between(params[:price_from].delete(',').to_f, params[:price_till].delete(',').to_f)
+        properties = properties.price_between(params[:price_from].delete(',').to_f, params[:price_till].delete(',').to_f)
       end
     elsif params[:price_till].present?
-      properties = Property.for_price_till(params[:price_till].delete(',').to_f)
+      properties = properties.for_price_till(params[:price_till].delete(',').to_f)
     end
 
     if params[:property_type].present?
