@@ -1,4 +1,4 @@
-<%= form_tag search_property_path, method: :post, remote: true, class: "simple_form form-light" do %>
+<%= form_tag properties_path, method: :get, class: "simple_form form-light" do %>
 
   <%= hidden_field_tag :type, params[:type] %>
 
