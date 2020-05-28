@@ -28,6 +28,11 @@
           <span>Properties</span>
         </a>
         <ul class="dropdown-menu">
+        <%= link_to admin_properties_path(), class: "dropdown-item" do %>
+            <i class="fa fa-home"></i>
+            <span>All</span>
+          <% end %>
+
           <%= link_to admin_properties_path(type: 'rent'), class: "dropdown-item" do %>
             <i class="fa fa-home"></i>
             <span>For Rent</span>

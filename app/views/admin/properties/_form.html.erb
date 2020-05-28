@@ -12,20 +12,20 @@
     <div class="col-md-3 px-1">
       <div class="form-group">
         <%= form.label :year_construction %>
-        <%= form.number_field :year_construction, value: property.persisted? ? property.year_construction : "", placeholder: "e.g. 1998", required: true, class: "form-control" %>
+        <%= form.number_field :year_construction, value: property.persisted? ? property.year_construction : "", placeholder: "e.g. 1998", class: "form-control" %>
       </div>
     </div>
     <div class="col-md-2 pl-1">
       <div class="form-group">
         <%= form.label :plot_area %>
-        <%= form.number_field :plot_area, step: :any, required: true, class: "form-control" %>
+        <%= form.number_field :plot_area, step: :any, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :constructed_area %>
-        <%= form.number_field :constructed_area, step: :any, required: true, class: "form-control" %>
+        <%= form.number_field :constructed_area, step: :any, class: "form-control" %>
       </div>
     </div>
   </div>
@@ -48,14 +48,14 @@
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :toilet_count %>
-        <%= form.number_field :toilet_count, required: true, class: "form-control" %>
+        <%= form.number_field :toilet_count, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :garage_count %>
-        <%= form.number_field :garage_count, required: true, class: "form-control" %>
+        <%= form.number_field :garage_count, class: "form-control" %>
       </div>
     </div>
   </div>
@@ -64,28 +64,28 @@
     <div class="col-md-3">
       <div class="form-group">
         <%= form.label :price %>
-        <%= form.number_field :price, step: :any, required: true, class: "form-control" %>
+        <%= form.number_field :price, step: :any, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :commission %>
-        <%= form.number_field :commission, step: :any, required: true, class: "form-control" %>
+        <%= form.number_field :commission, step: :any, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :lat, value: "Lattitude" %>
-        <%= form.number_field :lat, step: :any, required: true, class: "form-control" %>
+        <%= form.number_field :lat, step: :any, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :long, value: "Longitude" %>
-        <%= form.number_field :long, step: :any, required: true, class: "form-control" %>
+        <%= form.number_field :long, step: :any, class: "form-control" %>
       </div>
     </div>
   </div>
@@ -94,21 +94,21 @@
     <div class="col-md-3">
       <div class="form-group">
         <%= form.label :street_no %>
-        <%= form.text_field :street_no, required: true, class: "form-control" %>
+        <%= form.text_field :street_no, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :street_name %>
-        <%= form.text_field :street_name, required: true, class: "form-control" %>
+        <%= form.text_field :street_name, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :address %>
-        <%= form.text_field :address, required: true, class: "form-control" %>
+        <%= form.text_field :address, class: "form-control" %>
       </div>
     </div>
 
@@ -138,14 +138,14 @@
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :region %>
-        <%= form.text_field :region, required: true, class: "form-control" %>
+        <%= form.text_field :region, class: "form-control" %>
       </div>
     </div>
 
     <div class="col-md-3 pl-1">
       <div class="form-group">
         <%= form.label :country %>
-        <%= form.select :country, AdminHelper::COUNTRIES, { prompt: "- Select Country -" }, required: true, class: "form-control" %>
+        <%= form.select :country, AdminHelper::COUNTRIES, { prompt: "- Select Country -" }, class: "form-control" %>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@
 
     <div class="col-md-6">
       <%= form.label :property_type %>
-      <%= form.select :property_type, Property::TYPE, { prompt: "- Select Property Type -" }, class: "form-control" %>
+      <%= form.select :property_type, Property::TYPE, { prompt: "- Select Property Type -" }, required: true, class: "form-control" %>
     </div>
   </div>
 

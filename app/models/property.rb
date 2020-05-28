@@ -15,10 +15,9 @@ class Property < ApplicationRecord
           "Residential Building", "Semi-detached", "Studio",
           "Villa", "Warehouse"]
 
-  validate :has_type
+  # validate :has_type
 
-  validates :name, :year_construction, :country, :lat, :long, presence: true
-  validates :price, numericality: { greater_than: 0.0 }
+  validates :name, presence: true
 
   scope :for_rent, -> { where(for_rent: true) }
   scope :for_sale, -> { where(for_sale: true) }
@@ -50,11 +49,11 @@ class Property < ApplicationRecord
     property_type ? property_type : "Unknown"
   end
 
-  private
+  # private
 
-  def has_type
-    if for_sale.blank? && for_rent.blank?
-      errors.add(:base, "Must have at least one type either For Rent or For Sale")
-    end
-  end
+  # def has_type
+  #   if for_sale.blank? && for_rent.blank?
+  #     errors.add(:base, "Must have at least one type either For Rent or For Sale")
+  #   end
+  # end
 end
