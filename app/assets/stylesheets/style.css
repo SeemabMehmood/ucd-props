@@ -518,7 +518,7 @@ figure img { max-width: 100%; display: block; }
 .cta a { color: #5a595e; font-size: 30px; font-size: 2rem; display: inline-block; }
 .cta a.email { padding-bottom: 0; border-bottom: 2px solid #5a595e; }
 
-.leading { font-size: 40px; font-size: 2.66667rem; font-weight: 500; line-height: 1.2; }
+.leading { font-size: 40px; font-size: 2.66667rem; font-weight: 500; line-height: 1.2; text-align: justify;}
 .leading p { font-size: 18px; font-size: 1.2rem; }
 
 .house-feature .feature { *zoom: 1; margin-bottom: 100px; }
